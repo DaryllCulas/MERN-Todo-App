@@ -1,11 +1,15 @@
 import express from "express";
 import AuthRoute from "./routes/auth.js";
 import TodoRoute from "./routes/todo.js";
+import bodyParser from "body-parser";
+import  dotenv  from "dotenv";
+
 
 const app = express();
 const PORT = 3000;
 
-
+dotenv.config();
+app.use(bodyParser.json());
 app.use("/api/user", AuthRoute);
 app.use("/api/todos", TodoRoute);
 
