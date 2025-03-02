@@ -114,6 +114,21 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@font-face {
+  font-family: 'Regular';
+  font-weight: 400;
+  src: local("Poppins-Regular"),
+    url("./assets/fonts/Poppins-Regular.ttf")
+}
+
+@font-face {
+  font-family: 'Bold';
+  src: local("Poppins-Bold"),
+    url("./assets/fonts/Poppins-Bold.ttf");
+  font-weight: 700;
+}
+
+
 
 @layer base {
   :root {
@@ -170,4 +185,20 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
+ body {
+  @apply bg-background text-foreground font-normal;
+ } 
+ .message {
+  @apply text-left w-full p-4 text-sm text-white bg-red-500
+ }
+
+ .successMsg {
+  @apply bg-green-500
+ }
+
+ .iconHover {
+  @apply fill-slate-300 transition ease-in-out hover:cursor-pointer hover:fill-primary;
+ }
+
 }
