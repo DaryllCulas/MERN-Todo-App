@@ -37,6 +37,7 @@ export async function login(previousState, formData) {
             headers: {
                 "Content-Type": "application/json"
             },
+            credentials: "include",
             body: JSON.stringify({ email, password })
         });
         
